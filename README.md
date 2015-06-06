@@ -1,7 +1,5 @@
 # pythonforandroid
   This text file dilineates the steps needed to setup the android platform and write android apps using python on a PC.
-  Just follow the following steps and you should be able to write android apps using python and run them on your PC.
-  
   
 1)	Downlaod and install Java SE 6 or 7. I installed Java SE 7. Java SE 8 was found to be incomptabile and the emulator will show an error message instructing you to install a JDK.
 
@@ -49,11 +47,12 @@ From this page download the file: android-sdk_r24.2-windows.zip
 22)	Before we proceed with the configuration, ensure that you don't have any emulator programs such as Bluestacks running in the background. If so, please close any such applications.
 
 23) Now write a sample program that may contain the following lines or its variants but with the same functionality:
+		  
 		  import android
 		  test=android.Android()
 		  test.makeToast("Hello from Android on PC")
 	   
-	   Save this program (I named it android_test.py) in the platform-tools folder of the C:\Program Files\Android\android-sdk_r24.2-windows\android-sdk-windows\platform-tools
+Save this program (I named it android_test.py) in the platform-tools folder of the C:\Program Files\Android\android-sdk_r24.2-windows\android-sdk-windows\platform-tools
 
 24)	In Windows 8.1, right click on 'This PC' and click on 'Properties'. In the following window, click on 'Advanced System Settings' and then hit the Environment Variables.
 
