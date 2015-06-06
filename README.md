@@ -18,7 +18,7 @@ From this page download the file: android-sdk_r24.2-windows.zip
 
 8)	In the AVD manager window, select the virtual device configurations., I used Google Nexus 4, Skin Type: HVGA, Internal Memeory 1024 Mib and SDCard: 512 Mib
 
-9)  With the configurations set, click Ok.
+9)  	With the configurations set, click Ok.
 
 10)	Now the Android Virtual Device is created.
 
@@ -40,9 +40,9 @@ From this page download the file: android-sdk_r24.2-windows.zip
 
 19)	Just to ensure we have installed everything correctly, go to the apps screen of the android virtual device. 
 
-20) In that, click on an app named Sl4a and see if the various .py files have been installed.
+20) 	In that, click on an app named Sl4a and see if the various .py files have been installed.
 
-21) Now we need to setup the AVD so that it can execute any python program we write.
+21) 	Now we need to setup the AVD so that it can execute any python program we write.
 
 22)	Before we proceed with the configuration, ensure that you don't have any emulator programs such as Bluestacks running in the background. If so, please close any such applications.
 
@@ -61,7 +61,8 @@ Save this program (I named it android_test.py) in the platform-tools folder of t
 26)	In your PC, open your web browser and download the script android.py from the link: https://code.google.com/p/android-python-market/downloads/detail?name=android.py
 
 27)	Copy the android.py file in to the folder Python34/Tools/Scripts. Now we need to convert android.py to be compatible with Python 3. Launch a command promprt window and navigate to the same folder. Now execute the follwoing command:
-	2to3 android.py
+	
+		2to3 android.py
 
 28)	Then copy the android.py file to C:\Python3x folder (x is for the version. I am using Python 3.4 hence the folder Python34). If you are using Python2.x, copy the android.py file to C:\Python2x.
 
@@ -74,17 +75,21 @@ Save this program (I named it android_test.py) in the platform-tools folder of t
 32)	Now, launch command prompt. Navgiate to folder C:\Program Files\Android\android-sdk_r24.2-windows\android-sdk-windows\platform-tools.
 
 33)	To check which emulators are running, run the command: 
-	  adb devices
+	  	
+		adb devices
+	
 	If you see any extra devices, stop them using Task Manager.
 
 34)	We need to forward the network connection to the android device. For that, issue the following command:
-	    adb forward tcp:9999 tcp:12345 
-	    set AP_PORT=9999
+	    
+		adb forward tcp:9999 tcp:12345 
+		set AP_PORT=9999
 
 35)	Now run the program android_test.py.
 
 36)	We need to transfer the program to the sdcard of the Android Virtual Device to see if it runs on the Android platform. For this issue the following command in the command prompt:
-	    adb push android_test.py /sdcard/sl4a/scripts
+	    
+		adb push android_test.py /sdcard/sl4a/scripts
 
 37) 	Now open the Sl4a app in the Android Virtual Device. Along with the pre-installed scripts, the program android_test.py should now be listed. Click on that and select the wheel button to see if it displays the message.
 
