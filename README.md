@@ -78,7 +78,7 @@ Save this program (I named it android_test.py) in the platform-tools folder of t
 	  	
 		adb devices
 	
-	If you see any extra devices, stop them using Task Manager.
+If you see any extra devices, stop them using Task Manager.
 
 34)	We need to forward the network connection to the android device. For that, issue the following command:
 	    
